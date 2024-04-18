@@ -1,0 +1,32 @@
+.bold-title {
+    font-weight: 500;
+    font-size: 10px;
+    margin-bottom: 1rem;
+}
+
+  
+  .note-form {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .note-textarea {
+    width: calc(100% - 40px); 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .note-textarea::placeholder {
+    color: #aaa;
+  }
+  
+
+  .txt-description {
+    height: 400px
+  }

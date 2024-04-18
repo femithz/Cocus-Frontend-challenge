@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    margin: 80px auto 32px;
+    height: 80vh;
+  }
+  app-note-list {
+    width: 300px; 
+    background-color: #f2f2f2;
+    border-right: 1px solid rgba(225, 225, 225, 1);
+    overflow-y: auto;
+  }
+  app-create-note {
+    flex: 1;
+    overflow-y: auto; 
+    padding: 20px;
+  }

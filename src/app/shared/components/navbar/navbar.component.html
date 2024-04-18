@@ -1,0 +1,84 @@
+<div class="toolbar">
+        <img
+        width="80"
+        alt="Cocus Logo"
+        src="assets/cocus.png"
+        />
+        <span> Notes </span>
+      <div class="spacer"></div>
+      <div class="action-toolbar">
+            <div class="icon-container">
+                  <mat-icon
+                  matTooltip='Unselect notes'
+                  *ngIf="enableSelectionOption"
+                  (click)="selectNotesHandler()">
+                    tab_unselected
+                  </mat-icon>
+                  <mat-icon
+                   matTooltip='Select notes'
+                   *ngIf="!enableSelectionOption"
+                   (click)="selectNotesHandler()">
+                   select_all
+                  </mat-icon>
+                  <mat-icon
+                     mat-icon-button
+                    [matMenuTriggerFor]="menu"
+                    matTooltip='Save Options'
+                    [ngClass]="selectedNote? 'selected': ''"
+                    [ngClass]="disableEditing? 'disable-editing': ''">
+                    more_vert
+                  </mat-icon>
+                  <mat-menu #menu="matMenu">
+                    <span mat-menu-item (click)="savePdfHandler()">
+                      <span>Save as PDF</span>
+                    </span>
+                    <span mat-menu-item (click)="printNoteHandler()">
+                      <span>Print Note</span>
+                    </span>
+                  </mat-menu>
+                  <mat-icon
+                   matTooltip='Import/Export Notes'
+                   (click)="exportHandler()">
+                    import_export
+                  </mat-icon>
+                  <mat-icon 
+                    class="delete-icon"
+                    [ngClass]="selectedNote? 'selected': ''"
+                    [ngClass]="disableEditing? 'disable-editing': ''"
+                    matTooltip='Delete Note'
+                    (click)="deleteNoteHandler()">
+                    delete
+                  </mat-icon>
+                   <!-- Hidden file input element -->
+                  <!-- <input type="file" #fileInput accept="image/png, image/jpeg" (change)="onFileSelected($event)" class="hidden"> -->
+                  <!-- Mat icon for uploading image -->
+                  <!-- <mat-icon
+                    matTooltip='Add Image to Note'
+                    (click)="addEditNoteImageHandler(fileInput)">
+                    add_photo_alternate
+                  </mat-icon> -->
+                  <mat-icon 
+                    [ngClass]="disableEditing? 'disable-editing': ''"
+                    matTooltip='Create New Note'
+                    (click)="addEditNoteHandler()">
+                    edit
+                  </mat-icon>
+                  <mat-icon
+                    *ngIf="!disableEditing"
+                     matTooltip='Disable Editing'
+                     (click)="disableEditingHandler()">
+                    lock
+                  </mat-icon>
+                  <mat-icon 
+                   *ngIf="disableEditing"
+                    matTooltip='Enable Editing'
+                     (click)="disableEditingHandler()">
+                     lock_open
+                  </mat-icon>
+            </div>
+            <div class="search-bar">
+                <mat-icon>search</mat-icon>
+                <input type="text" placeholder="Search" (keyup)="searchHandler(searchInput)" #searchInput />
+            </div>
+        </div>
+  </div>

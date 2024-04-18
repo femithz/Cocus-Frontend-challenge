@@ -1,0 +1,106 @@
+p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #2C2F3A;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar span {
+        margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .action-toolbar{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+
+  .icon-container{
+    float: right;
+    margin-right: 25px;
+  }
+  .hidden {
+    display: none;
+  }
+
+  mat-icon{
+    cursor: pointer;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 7px;
+    background-color: #4a3939;
+}
+
+
+
+.search-bar{
+  border: 1px solid #eee;
+  padding: 0px 12px 0px 5px;
+  position: relative;
+  height: 60%;
+  border-radius: 5px;
+  vertical-align: middle;
+  background-color: #fff;
+  float: right;
+  top: 9px;
+  right: 20px;
+  width: 30%;
+}
+
+.search-bar mat-icon{
+  padding: 5px 0px 0px 2px;
+  position: absolute;
+  font-size: 20px;
+  margin: 0px 0px 0px 0.5px;
+  background-color: #4a3939;
+  color: #fff;
+  float: left;
+  left: 0;
+  height: 75%;
+}
+
+.search-bar input{
+  border: none;
+  outline: none;
+  height: 90%;
+  margin-left: 25px;
+  width: 95%;
+  border-radius: 5px;
+}

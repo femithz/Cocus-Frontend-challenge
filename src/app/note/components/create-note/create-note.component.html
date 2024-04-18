@@ -1,0 +1,22 @@
+
+<span class="bold-title">
+    {{currentDate | date: 'medium'}}
+</span>
+<!-- Section for both title and description start -->
+<div class="note-detail"> 
+        <form [formGroup]="noteForm" class="note-form">
+                            <!-- View Image section start -->
+                            <div *ngIf="">
+
+                            </div>
+                            <!-- View Image section ends -->
+                            <!-- Title Input Field -->
+                                <textarea formControlName="title" [placeholder]="'Add Title'"  (keyup)="textInputMethod()" class="note-textarea" #titleTextarea> 
+                                </textarea>
+                            <!-- Title Input Field -->
+                                <textarea formControlName="body" [placeholder]="'Add Description'" (keyup)="textInputMethod()"  class="note-textarea txt-description" #bodyTextarea>
+                                </textarea>
+                        <!--  Section for both title and description ends  -->
+        </form>
+
+</div>
